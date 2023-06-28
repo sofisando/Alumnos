@@ -1,2 +1,12 @@
 nombre_apellido ; DNI ; notas ; nota_final
-Sofia Sandobal; 44876837; [8, 6, 4, 9, 8, 7]; 7.0
+Sofía Sandobal; 44876837; [8, 6, 4, 9, 8, 7]; 7.0
+María López; 87654321; [9, 8, 7, 9, 8, 9]; 8.5
+Luis Torres; 11111111; [4, 5, 3, 6, 5, 4]; 4.5
+Juan Perez; 98765432; [7, 6, 8, 7, 6, 5]; 6.5
+Ana Rodríguez; 76543219; [10, 10, 9, 10, 10, 9]; 9.67
+Pedro Gómez; 65432198; [8, 7, 6, 7, 8, 7]; 7.17
+Laura Fernández; 54321987; [6, 6, 7, 5, 6, 7]; 6.17
+Miguel Torres; 43219876; [7, 8, 9, 7, 8, 9]; 8.0
+Isabel Ramírez; 32198765; [9, 8, 9, 8, 9, 8]; 8.5
+Carolina Perez; 22222222; [2, 3, 4, 3, 2, 5]; 3.0
+Andres Sanchez; 33333333; [5, 4, 4, 5, 3, 2]; 4.17
