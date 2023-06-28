@@ -1,46 +1,49 @@
+#funciones
+def añadir_alumno(nombre_apellido, DNI, notas, nota_final): 
+    archivo = open('datos_alumnos.txt', 'a')
+    archivo.write(f'{nombre_apellido}; {DNI}; {notas}; {nota_final}\n')
+    archivo.close()
+
+def promedio(*args):
+    suma = 0
+    longitud = len(args)
+    if longitud <= 0:  # evitar división entre 0
+        return 0
+    for arg in args:
+        suma += int(arg)
+    return suma / longitud
+
 while True:
     opcion = int(input("1 - Ingresar estudiante y nota de los prácticos\n2 - Mostrar estudiantes aprobados / desaprobados\n3 - Salir\nElija una opción del menú: "))
     
     if opcion == 1:
-        #Ingresar estudiante y nota de los prácticos
-        Nombre_apellido = input('Ingrese Nombre y Apellido: ') #anda a saber si lo toma con el espacio
-        dni = int(input('Ingrese DNI: '))
-        
-        for nota in range(0,6): #verificar que entren 6 notas
-            cont = 1
-            notas = []
+        # Ingresar estudiante y nota de los prácticos
+        Nombre = input('Ingrese el nombre: ')
+        Apellido = input('Ingrese el apellido: ')
+        nombre_apellido = Nombre + " " + Apellido
+        DNI = int(input('Ingrese DNI: '))
+        notas = []
+        for cont in range(1, 7):  # Iterar del 1 al 6
             while True:
-                nota = int(input(print("Ingrese la nota del práctico",cont)))
-                if nota>1 and nota<10:
-                    nota.append(notas)
-                    cont += 1
+                nota = int(input(f"Ingrese la nota del práctico {cont}: "))
+                if 1 <= nota <= 10:
+                    notas.append(nota)
                     break
                 else: 
-                    print('La nota debe ser del 1 al 10. Por favor, vuelva a intentarlo.')
-
-        #Funcion que promedia las notas para añadirlo como atributo
-
-        # #Funcion que permita ingresar datos de alumnos y sus notas
-        # def nuevos_datos_alumnos(Nombre_apellido, dni, notas):
-        #     archivo=open('datos_alumnos','a')#append
-        #     archivo.write('como estas')
-        #     archivo.close()
-
-       
+                    print('La nota debe ser del 1 al 10. Por favor, vuelva a intentarlo.')     
+        
+        # Aplicar las funciones para calcular el promedio y cargarlo al sistema
+        nota_final = promedio(*notas)
+        añadir_alumno(nombre_apellido, DNI, notas, nota_final)
 
     elif opcion == 2:
-        print('ola')
+        print('Hola')
 
     elif opcion == 3:
-        print('¡Espero tengas buen día, adios!')
+        print('¡Espero tengas buen día, adiós!')
         break
 
     else:
         print('Por favor ingrese una opción del menú')
 
-    print ('------------------------------------------------')
-     
-#Funcion que permita ingresar datos de alumnos y sus notas
-archivo=open('datos_alumnos','a')#append
-archivo.write('como estas')
-archivo.close()
+    print('------------------------------------------------')
